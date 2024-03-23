@@ -28,7 +28,7 @@ struct ContentView: View {
                     if isSelected {
                         isSelected2 = false
                     }
-                }
+                }.accessibilityValue(isSelected ? " Selected" : " Not Selected")
                 SelectButton(
                     isSelected: $isSelected2,
                     color: .red,
@@ -39,7 +39,7 @@ struct ContentView: View {
                     if isSelected2 {
                         isSelected = false
                     }
-                }
+                }.accessibilityValue(isSelected2 ? "Selected" : "Not Selected")
             }
             Button("Submit") {
                 alertText = isSelected ? "Correct answer" : "Nope!!"
